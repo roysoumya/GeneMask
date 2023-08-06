@@ -1,9 +1,9 @@
 # GeneMask
-Codebase for ECAI 2023 paper "GeneMask: Fast Pretraining of Gene Sequences to Enable Few-Shot Learning"
+Codebase for the paper "GeneMask: Fast Pretraining of Gene Sequences to Enable Few-Shot Learning" accepted for publication at the 26th European Conference on Artificial Intelligence [ECAI 2023](https://ecai2023.eu/) (Core A conference). The preprint is available at [https://arxiv.org/abs/2307.15933](https://arxiv.org/abs/2307.15933)
 
 Here we provide the following resources required for: (a) Computing $Normalized-PMI_k$ for all 6-mers based on the Human Reference Genome. (b) PMI-best - pretraining and finetuning (c) Datasets of Prom-core, Prom-300, and Cohn-enh used for the different few-shot settings. (d) de novo motif discovery using the _rGADEM_ R package.
 
-***We will release the trained model weights and various model checkpoints of GeneMask, its two pretraining model variations and all baseline models, after paper acceptance.***
+***The pre-trained model weights are available at this [Google Drive](https://drive.google.com/drive/folders/101qPYTdBFXR5XmPwZ-rCDFDD3gwsB9vj?usp=sharing) link.***
 
 ![Method overview of GeneMask](genemask-method-overview.png)
 
@@ -60,3 +60,16 @@ We follow the same pretraining and finetuning process as done in the case of DNA
 **Motif Analysis**
 
 **Code-F**: We provide the code to reproduce the de novo motif discovery results using the _rGADEM_ R package as described in Section 6.3 (Motif Analysis). The approach is based on the following resource: Unsupervised motif discovery tutorial from https://compgenomr.github.io/book/motif-discovery.html
+
+If you use the codes or the contents of the paper, please cite:
+
+```
+@misc{roy2023genemask,
+      title={GeneMask: Fast Pretraining of Gene Sequences to Enable Few-Shot Learning}, 
+      author={Soumyadeep Roy and Jonas Wallat and Sowmya S Sundaram and Wolfgang Nejdl and Niloy Ganguly},
+      year={2023},
+      eprint={2307.15933},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
