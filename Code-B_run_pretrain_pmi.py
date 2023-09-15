@@ -349,7 +349,7 @@ def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> T
             added_tokens= []
             for (pmi_rank, pmi_index) in top_segments_only:
                 for mask_number in mask_list_11:
-                    current_index = center + mask_number
+                    current_index = pmi_index + mask_number
                     if current_index <= end and current_index >= 1:
                         new_centers.add(current_index)
     
