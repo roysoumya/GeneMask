@@ -335,18 +335,11 @@ def mask_tokens(inputs: torch.Tensor, tokenizer: PreTrainedTokenizer, args) -> T
             if segment_cnt < 5:
                 top_segments_only= highest_pmi_id_per_mask_center
             else:
+                highest_pmi_id_per_mask_center.sort(key=lambda a: a[0])
                 top_segments_only= highest_pmi_id_per_mask_center[0:segment_cnt]
             #print('Segment count= ', segment_cnt)
-            #print('Before sorting: ', highest_pmi_id_per_mask_center)
-
-            highest_pmi_id_per_mask_center.sort(key= lambda a: a[0])
-            
-            #print('After sorting: ', highest_pmi_id_per_mask_center)
-
-            
 
             # select half of total segment_cnt top 5 only
-            added_tokens= []
             for (pmi_rank, pmi_index) in top_segments_only:
                 for mask_number in mask_list_11:
                     current_index = pmi_index + mask_number
